@@ -12,7 +12,7 @@ pluginManagement {
         id("org.jetbrains.kotlin.plugin.allopen") version kotlinVersion
     }
 }
-rootProject.name="quarkomment"
+rootProject.name="quarkus-astro-starter"
 
 val apps = File("apps")
 val libs = File("libs")

@@ -19,7 +19,6 @@ export default defineConfig({
 	base: SITE.basePathname,
 
 	output: 'static',
-	// outDir: '../src/main/resources/META-INF/resources/',
 
 	integrations: [
 		tailwind({
