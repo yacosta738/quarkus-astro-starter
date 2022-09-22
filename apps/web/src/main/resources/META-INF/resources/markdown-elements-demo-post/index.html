@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
+	<head>
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Markdown elements demo post — AstroWind</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="Lorem ipsum dolor sit amet" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="Markdown elements demo post" />
+<meta property="og:description" content="Lorem ipsum dolor sit amet" />
+<meta property="og:url" content="http://localhost:8080/markdown-elements-demo-post" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="http://localhost:8080/assets/astronaut.53563f21.jpg" />
+<meta property="og:image:alt" content="Markdown elements demo post" />
+<link rel="canonical" href="http://localhost:8080/markdown-elements-demo-post" />
+
+
+<!-- Or Google Fonts -->
+
+<!-- Google Site Verification -->
+<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
+
+<!-- Google Analytics -->
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
+
+
+	<link rel="stylesheet" href="/assets/fb1798d7.d2b618f7.css" /><script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.4.5 - MIT builder.io */
+!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.4.5":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
+
+	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
+		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
+	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
+		<div class="flex justify-between">
+			<a class="flex items-center" href="/">
+				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
+	🚀 AstroWind</span>
+			</a>
+			<div class="flex items-center md:hidden">
+				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
+</button>
+			</div>
+		</div>
+		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
+			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center collapse w-full md:w-auto collapsed text-xl md:text-base">
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="#">Pages</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/useful-resources-to-create-websites">Resources
+					</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog">Blog</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/onwidget/astrowind">Github
+					</a>
+				</li>
+			</ul>
+			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+				<div class="hidden items-center md:flex">
+					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+					<a href="https://github.com/onwidget/astrowind" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Astrowind Github">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header><main>
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
+		<header>
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="Aug 02 2022">Aug 2, 2022</time> ~ 10 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				Markdown elements demo post
+			</h1>
+			<picture>
+			<source type="image/avif" srcset="/assets/astronaut.53563f21_uKT2w.avif 400w,/assets/astronaut.53563f21_2cbqeL.avif 900w" sizes="(max-width: 900px) 400px, 900px"><source type="image/webp" srcset="/assets/astronaut.53563f21_1e6I0i.webp 400w,/assets/astronaut.53563f21_Z29ESBo.webp 900w" sizes="(max-width: 900px) 400px, 900px"><source type="image/jpeg" srcset="/assets/astronaut.53563f21_2jEPrt.jpg 400w,/assets/astronaut.53563f21_1xXnvC.jpg 900w" sizes="(max-width: 900px) 400px, 900px">
+			<img width="900" height="506" src="/assets/astronaut.53563f21_1A0ST1.jpg" loading="lazy" decoding="async" alt="Lorem ipsum dolor sit amet" class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700">
+		</picture>
+		</header>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2 id="headings"><a name="Headings"></a>Headings</h2>
+<p>Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem. Ut laborum cillum laboris fugiat culpa sint irure do reprehenderit culpa occaecat. Exercitation esse mollit tempor magna aliqua in occaecat aliquip veniam reprehenderit nisi dolor in laboris dolore velit.</p>
+<h2 id="heading-two">Heading two</h2>
+<p>Aute officia nulla deserunt do deserunt cillum velit magna. Officia veniam culpa anim minim dolore labore pariatur voluptate id ad est duis quis velit dolor pariatur enim. Incididunt enim excepteur do veniam consequat culpa do voluptate dolor fugiat ad adipisicing sit. Labore officia est adipisicing dolore proident eiusmod exercitation deserunt ullamco anim do occaecat velit. Elit dolor consectetur proident sunt aliquip est do tempor quis aliqua culpa aute. Duis in tempor exercitation pariatur et adipisicing mollit irure tempor ut enim esse commodo laboris proident. Do excepteur laborum anim esse aliquip eu sit id Lorem incididunt elit irure ea nulla dolor et. Nulla amet fugiat qui minim deserunt enim eu cupidatat aute officia do velit ea reprehenderit.</p>
+<h3 id="heading-three">Heading three</h3>
+<p>Voluptate cupidatat cillum elit quis ipsum eu voluptate fugiat consectetur enim. Quis ut voluptate culpa ex anim aute consectetur dolore proident voluptate exercitation eiusmod. Esse in do anim magna minim culpa sint. Adipisicing ipsum consectetur proident ullamco magna sit amet aliqua aute fugiat laborum exercitation duis et.</p>
+<h4 id="heading-four">Heading four</h4>
+<p>Commodo fugiat aliqua minim quis pariatur mollit id tempor. Non occaecat minim esse enim aliqua adipisicing nostrud duis consequat eu adipisicing qui. Minim aliquip sit excepteur ipsum consequat laborum pariatur excepteur. Veniam fugiat et amet ad elit anim laborum duis mollit occaecat et et ipsum et reprehenderit. Occaecat aliquip dolore adipisicing sint labore occaecat officia fugiat. Quis adipisicing exercitation exercitation eu amet est laboris sunt nostrud ipsum reprehenderit ullamco. Enim sint ut consectetur id anim aute voluptate exercitation mollit dolore magna magna est Lorem. Ut adipisicing adipisicing aliqua ullamco voluptate labore nisi tempor esse magna incididunt.</p>
+<h5 id="heading-five">Heading five</h5>
+<p>Veniam enim esse amet veniam deserunt laboris amet enim consequat. Minim nostrud deserunt cillum consectetur commodo eu enim nostrud ullamco occaecat excepteur. Aliquip et ut est commodo enim dolor amet sint excepteur. Amet ad laboris laborum deserunt sint sunt aliqua commodo ex duis deserunt enim est ex labore ut. Duis incididunt velit adipisicing non incididunt adipisicing adipisicing. Ad irure duis nisi tempor eu dolor fugiat magna et consequat tempor eu ex dolore. Mollit esse nisi qui culpa ut nisi ex proident culpa cupidatat cillum culpa occaecat anim. Ut officia sit ea nisi ea excepteur nostrud ipsum et nulla.</p>
+<h6 id="heading-six">Heading six</h6>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p><a href="#top">[Top]</a></p>
+<h2 id="paragraphs"><a name="Paragraphs"></a>Paragraphs</h2>
+<p>Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum. Do laboris laboris minim incididunt qui consectetur exercitation adipisicing dolore et magna consequat magna anim sunt. Officia fugiat Lorem sunt pariatur incididunt Lorem reprehenderit proident irure. Dolore ipsum aliqua mollit ad officia fugiat sit eu aliquip cupidatat ipsum duis laborum laborum fugiat esse. Voluptate anim ex dolore deserunt ea ex eiusmod irure. Occaecat excepteur aliqua exercitation aliquip dolor esse eu eu.</p>
+<p>Officia dolore laborum aute incididunt commodo nisi velit est est elit et dolore elit exercitation. Enim aliquip magna id ipsum aliquip consectetur ad nulla quis. Incididunt pariatur dolor consectetur cillum enim velit cupidatat laborum quis ex.</p>
+<p>Officia irure in non voluptate adipisicing sit amet tempor duis dolore deserunt enim ut. Reprehenderit incididunt in ad anim et deserunt deserunt Lorem laborum quis. Enim aute anim labore proident laboris voluptate elit excepteur in. Ex labore nulla velit officia ullamco Lorem Lorem id do. Dolore ullamco ipsum magna dolor pariatur voluptate ipsum id occaecat ipsum. Dolore tempor quis duis commodo quis quis enim.</p>
+<p><a href="#top">[Top]</a></p>
+<h2 id="blockquotes"><a name="Blockquotes"></a>Blockquotes</h2>
+<p>Ad nisi laborum aute cupidatat magna deserunt eu id laboris id. Aliquip nulla cupidatat sint ex Lorem mollit laborum dolor amet est ut esse aute. Nostrud ex consequat id incididunt proident ipsum minim duis aliqua ut ex et ad quis. Laborum sint esse cillum anim nulla cillum consectetur aliqua sit. Nisi excepteur cillum labore amet excepteur commodo enim occaecat consequat ipsum proident exercitation duis id in.</p>
+<blockquote>
+<p>Ipsum et cupidatat mollit exercitation enim duis sunt irure aliqua reprehenderit mollit. Pariatur Lorem pariatur laboris do culpa do elit irure. Eiusmod amet nulla voluptate velit culpa et aliqua ad reprehenderit sit ut.</p>
+</blockquote>
+<p>Labore ea magna Lorem consequat aliquip consectetur cillum duis dolore. Et veniam dolor qui incididunt minim amet laboris sit. Dolore ad esse commodo et dolore amet est velit ut nisi ea. Excepteur ea nulla commodo dolore anim dolore adipisicing eiusmod labore id enim esse quis mollit deserunt est. Minim ea culpa voluptate nostrud commodo proident in duis aliquip minim.</p>
+<blockquote>
+<p>Qui est sit et reprehenderit aute est esse enim aliqua id aliquip ea anim. Pariatur sint reprehenderit mollit velit voluptate enim consectetur sint enim. Quis exercitation proident elit non id qui culpa dolore esse aliquip consequat.</p>
+</blockquote>
+<p>Ipsum excepteur cupidatat sunt minim ad eiusmod tempor sit.</p>
+<blockquote>
+<p>Deserunt excepteur adipisicing culpa pariatur cillum laboris ullamco nisi fugiat cillum officia. In cupidatat nulla aliquip tempor ad Lorem Lorem quis voluptate officia consectetur pariatur ex in est duis. Mollit id esse est elit exercitation voluptate nostrud nisi laborum magna dolore dolore tempor in est consectetur.</p>
+</blockquote>
+<p>Adipisicing voluptate ipsum culpa voluptate id aute laboris labore esse fugiat veniam ullamco occaecat do ut. Tempor et esse reprehenderit veniam proident ipsum irure sit ullamco et labore ea excepteur nulla labore ut. Ex aute minim quis tempor in eu id id irure ea nostrud dolor esse.</p>
+<p><a href="#top">[Top]</a></p>
+<h2 id="lists"><a name="Lists"></a>Lists</h2>
+<h3 id="ordered-list">Ordered List</h3>
+<ol>
+<li>Longan</li>
+<li>Lychee</li>
+<li>Excepteur ad cupidatat do elit laborum amet cillum reprehenderit consequat quis.
+Deserunt officia esse aliquip consectetur duis ut labore laborum commodo aliquip aliquip velit pariatur dolore.</li>
+<li>Marionberry</li>
+<li>Melon
+<ul>
+<li>Cantaloupe</li>
+<li>Honeydew</li>
+<li>Watermelon</li>
+</ul>
+</li>
+<li>Miracle fruit</li>
+<li>Mulberry</li>
+</ol>
+<h3 id="unordered-list">Unordered List</h3>
+<ul>
+<li>Olive</li>
+<li>Orange
+<ul>
+<li>Blood orange</li>
+<li>Clementine</li>
+</ul>
+</li>
+<li>Papaya</li>
+<li>Ut aute ipsum occaecat nisi culpa Lorem id occaecat cupidatat id id magna laboris ad duis. Fugiat cillum dolore veniam nostrud proident sint consectetur eiusmod irure adipisicing.</li>
+<li>Passionfruit</li>
+</ul>
+<p><a href="#top">[Top]</a></p>
+<h2 id="horizontal-rule"><a name="Horizontal"></a>Horizontal rule</h2>
+<p>In dolore velit aliquip labore mollit minim tempor veniam eu veniam ad in sint aliquip mollit mollit. Ex occaecat non deserunt elit laborum sunt tempor sint consequat culpa culpa qui sit. Irure ad commodo eu voluptate mollit cillum cupidatat veniam proident amet minim reprehenderit.</p>
+<hr>
+<p>In laboris eiusmod reprehenderit aliquip sit proident occaecat. Non sit labore anim elit veniam Lorem minim commodo eiusmod irure do minim nisi. Dolor amet cillum excepteur consequat sint non sint.</p>
+<p><a href="#top">[Top]</a></p>
+<h2 id="table"><a name="Table"></a>Table</h2>
+<p>Duis sunt ut pariatur reprehenderit mollit mollit magna dolore in pariatur nulla commodo sit dolor ad fugiat. Laboris amet ea occaecat duis eu enim exercitation deserunt ea laborum occaecat reprehenderit. Et incididunt dolor commodo consequat mollit nisi proident non pariatur in et incididunt id. Eu ut et Lorem ea ex magna minim ipsum ipsum do.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Table Heading 1</th><th align="left">Table Heading 2</th><th align="center">Center align</th><th align="right">Right align</th><th align="left">Table Heading 5</th></tr></thead><tbody><tr><td align="left">Item 1</td><td align="left">Item 2</td><td align="center">Item 3</td><td align="right">Item 4</td><td align="left">Item 5</td></tr><tr><td align="left">Item 1</td><td align="left">Item 2</td><td align="center">Item 3</td><td align="right">Item 4</td><td align="left">Item 5</td></tr><tr><td align="left">Item 1</td><td align="left">Item 2</td><td align="center">Item 3</td><td align="right">Item 4</td><td align="left">Item 5</td></tr><tr><td align="left">Item 1</td><td align="left">Item 2</td><td align="center">Item 3</td><td align="right">Item 4</td><td align="left">Item 5</td></tr><tr><td align="left">Item 1</td><td align="left">Item 2</td><td align="center">Item 3</td><td align="right">Item 4</td><td align="left">Item 5</td></tr></tbody></table>
+<p>Minim id consequat adipisicing cupidatat laborum culpa veniam non consectetur et duis pariatur reprehenderit eu ex consectetur. Sunt nisi qui eiusmod ut cillum laborum Lorem officia aliquip laboris ullamco nostrud laboris non irure laboris. Cillum dolore labore Lorem deserunt mollit voluptate esse incididunt ex dolor.</p>
+<p><a href="#top">[Top]</a></p>
+<h2 id="code"><a name="Code"></a>Code</h2>
+<h3 id="inline-code">Inline code</h3>
+<p>Ad amet irure est magna id mollit Lorem in do duis enim. Excepteur velit nisi magna ea pariatur pariatur ullamco fugiat deserunt sint non sint. Duis duis est <code>code in text</code> velit velit aute culpa ex quis pariatur pariatur laborum aute pariatur duis tempor sunt ad. Irure magna voluptate dolore consectetur consectetur irure esse. Anim magna <code>&#x3C;strong>in culpa qui officia&#x3C;/strong></code> dolor eiusmod esse amet aute cupidatat aliqua do id voluptate cupidatat reprehenderit amet labore deserunt.</p>
+<h3 id="highlighted">Highlighted</h3>
+<p>Et fugiat ad nisi amet magna labore do cillum fugiat occaecat cillum Lorem proident. In sint dolor ullamco ad do adipisicing amet id excepteur Lorem aliquip sit irure veniam laborum duis cillum. Aliqua occaecat minim cillum deserunt magna sunt laboris do do irure ea nostrud consequat ut voluptate ex.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">package</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">main</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> (</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #A5D6FF">"</span><span style="color: #FFA657">fmt</span><span style="color: #A5D6FF">"</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #A5D6FF">"</span><span style="color: #FFA657">net/http</span><span style="color: #A5D6FF">"</span></span>
+<span class="line"><span style="color: #C9D1D9">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">func</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">handler</span><span style="color: #C9D1D9">(w http.ResponseWriter, r </span><span style="color: #FF7B72">*</span><span style="color: #C9D1D9">http.Request) {</span></span>
+<span class="line"><span style="color: #C9D1D9">    fmt.</span><span style="color: #79C0FF">Fprintf</span><span style="color: #C9D1D9">(w, </span><span style="color: #A5D6FF">"Hi there, I love </span><span style="color: #79C0FF">%s</span><span style="color: #A5D6FF">!"</span><span style="color: #C9D1D9">, r.URL.Path[</span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9">:])</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">func</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">main</span><span style="color: #C9D1D9">() {</span></span>
+<span class="line"><span style="color: #C9D1D9">    http.</span><span style="color: #79C0FF">HandleFunc</span><span style="color: #C9D1D9">(</span><span style="color: #A5D6FF">"/"</span><span style="color: #C9D1D9">, handler)</span></span>
+<span class="line"><span style="color: #C9D1D9">    http.</span><span style="color: #79C0FF">ListenAndServe</span><span style="color: #C9D1D9">(</span><span style="color: #A5D6FF">":8080"</span><span style="color: #C9D1D9">, </span><span style="color: #79C0FF">nil</span><span style="color: #C9D1D9">)</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<p>Ex amet id ex aliquip id do laborum excepteur exercitation elit sint commodo occaecat nostrud est. Nostrud pariatur esse veniam laborum non sint magna sit laboris minim in id. Aliqua pariatur pariatur excepteur adipisicing irure culpa consequat commodo et ex id ad.</p>
+<p><a href="#top">[Top]</a></p>
+<h2 id="inline-elements"><a name="Inline"></a>Inline elements</h2>
+<p>Sint ea anim ipsum ad commodo cupidatat do <strong>exercitation</strong> incididunt et minim ad labore sunt. Minim deserunt labore laboris velit nulla incididunt ipsum nulla. Ullamco ad laborum ea qui et anim in laboris exercitation tempor sit officia laborum reprehenderit culpa velit quis. <strong>Consequat commodo</strong> reprehenderit duis <a href="#!">irure</a> esse esse exercitation minim enim Lorem dolore duis irure. Nisi Lorem reprehenderit ea amet excepteur dolor excepteur magna labore proident voluptate ipsum. Reprehenderit ex esse deserunt aliqua ea officia mollit Lorem nulla magna enim. Et ad ipsum labore enim ipsum <strong>cupidatat consequat</strong>. Commodo non ea cupidatat magna deserunt dolore ipsum velit nulla elit veniam nulla eiusmod proident officia.</p>
+<p><img src="https://images.unsplash.com/photo-1471128466710-c26ff0d26143?crop=entropy&#x26;cs=tinysrgb&#x26;fit=max&#x26;fm=jpg&#x26;ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2MDc4MTk3Mw&#x26;ixlib=rb-1.2.1&#x26;q=80&#x26;utm_campaign=api-credit&#x26;utm_medium=referral&#x26;utm_source=unsplash_source&#x26;w=1080" alt="Super wide"></p>
+<p><em>Proident sit veniam in est proident officia adipisicing</em> ea tempor cillum non cillum velit deserunt. Voluptate laborum incididunt sit consectetur Lorem irure incididunt voluptate nostrud. Commodo ut eiusmod tempor cupidatat esse enim minim ex anim consequat. Mollit sint culpa qui laboris quis consectetur ad sint esse. Amet anim anim minim ullamco et duis non irure. Sit tempor adipisicing ea laboris <code>culpa ex duis sint</code> anim aute reprehenderit id eu ea. Aute <a href="#!">excepteur proident</a> Lorem minim adipisicing nostrud mollit ad ut voluptate do nulla esse occaecat aliqua sint anim.</p>
+<p><img src="https://placekitten.com/480/400" alt="Not so big"></p>
+<p>Incididunt in culpa cupidatat mollit cillum qui proident sit. In cillum aliquip incididunt voluptate magna amet cupidatat cillum pariatur sint aliqua est <em>enim <strong>anim</strong> voluptate</em>. Magna aliquip proident incididunt id duis pariatur eiusmod incididunt commodo culpa dolore sit. Culpa do nostrud elit ad exercitation anim pariatur non minim nisi <strong>adipisicing sunt <em>officia</em></strong>. Do deserunt magna mollit Lorem commodo ipsum do cupidatat mollit enim ut elit veniam ea voluptate.</p>
+<p>Reprehenderit non eu quis in ad elit esse qui aute id <a href="#!">incididunt</a> dolore cillum. Esse laboris consequat dolor anim exercitation tempor aliqua deserunt velit magna laboris. Culpa culpa minim duis amet mollit do quis amet commodo nulla irure.</p>
+		</div>
+		<div class="container mx-auto px-8 sm:px-6 max-w-3xl mt-8">
+			<ul class="text-sm">
+			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tag/markdown">markdown</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tag/astro">astro</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tag/blog">blog</a>
+				</li>
+		</ul>
+		</div>
+	</article>
+</section>
+	</main><footer class="border-t border-gray-200 dark:border-slate-800">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
+			<div class="col-span-12 lg:col-span-4">
+				<div class="mb-2">
+					<a class="inline-block font-bold text-xl" href="/">AstroWind</a>
+				</div>
+				<div class="text-sm text-gray-600">
+					<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="#">Terms</a> ·
+					<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="#">Privacy Policy</a>
+				</div>
+			</div>
+			<div class="col-span-6 md:col-span-3 lg:col-span-2">
+				<div class="text-gray-800 dark:text-gray-300 font-medium mb-2">Product</div>
+				<ul class="text-sm">
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Features</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Security</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Team</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Enterprise</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Customer stories</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Pricing</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Resources</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-span-6 md:col-span-3 lg:col-span-2">
+				<div class="text-gray-800 dark:text-gray-300 font-medium mb-2">Platform</div>
+				<ul class="text-sm">
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Developer API</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Partners</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Atom</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Electron</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">GitHub Desktop</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-span-6 md:col-span-3 lg:col-span-2">
+				<div class="text-gray-800 dark:text-gray-300 font-medium mb-2">Support</div>
+				<ul class="text-sm">
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Docs</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Community Forum</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Professional Services</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Skills</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Status</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-span-6 md:col-span-3 lg:col-span-2">
+				<div class="text-gray-800 dark:text-gray-300 font-medium mb-2">Company</div>
+				<ul class="text-sm">
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">About</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Blog</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Careers</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Press</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Inclusion</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Social Impact</a>
+					</li>
+					<li class="mb-2">
+						<a class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out" href="#">Shop</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="#">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Instagram" href="#">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-instagram"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="4"/><circle cx="12" cy="12" r="3"/><path d="M16.5 7.5v.001"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Facebook" href="#">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-facebook"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2H7"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/onwidget/astrowind">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+				</li>
+			</ul>
+			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
+				<span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]">
+				</span>
+				Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> ·
+				All rights reserved.
+			</div>
+		</div>
+	</div>
+</footer>
+		<script>
+	// Set "light" theme as default
+	// if (!localStorage.theme) {
+	//   localStorage.theme = "light";
+	// }
+
+	if (
+		localStorage.theme === 'dark' ||
+		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+		document.documentElement.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+	}
+
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches && matches.length) {
+			matches.forEach((elem) => {
+				elem.addEventListener(event, () => fn(elem), false);
+			});
+		}
+	}
+
+	window.onload = function () {
+		attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
+			elem.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+
+		attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+			document.documentElement.classList.toggle('dark');
+			localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+		});
+	};
+	window.onpageshow = function () {
+		const elem = document.querySelector('[data-aw-toggle-menu]');
+		if (elem) {
+			elem.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>
+
+		
+	</body>
+</html>
