@@ -1,4 +1,4 @@
-package com.example.quarkusmm
+package com.acosta.quarkusastro
 
 import io.quarkus.test.junit.QuarkusTest
 import io.restassured.RestAssured.given
@@ -14,7 +14,7 @@ class ExampleResourceTest {
           .`when`().get("/hello")
           .then()
              .statusCode(200)
-             .body(`is`("howdy"))
+             .body(`is`("howdy dude leb"))
     }
 
 }

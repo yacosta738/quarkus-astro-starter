@@ -1,6 +1,6 @@
-package com.example.quarkusmm
+package com.acosta.quarkusastro
 
-import com.example.quarkusmm.port.CustomerService
+import com.acosta.quarkusastro.port.CustomerService
 import javax.inject.Inject
 import javax.ws.rs.GET
 import javax.ws.rs.Path

@@ -1,6 +1,6 @@
-package com.example.quarkusmm.domain
+package com.acosta.quarkusastro.domain
 
-import com.example.quarkusmm.port.CustomerService
+import com.acosta.quarkusastro.port.CustomerService
 import javax.enterprise.context.ApplicationScoped
 
 @ApplicationScoped
