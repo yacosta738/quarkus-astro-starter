@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && cpx \"./dist/**/*\" \"../resources/META-INF/resources\"",
+    "build": "astro build && cpx \"./dist/**/*\" \"../../../build/resources/main/META-INF/resources\"",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",

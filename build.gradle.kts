@@ -8,7 +8,7 @@ plugins {
 
 
 allprojects {
-    group = "com.quarkomment"
+    group = "com.acosta.quarkusastro"
     version = "1.0.0-SNAPSHOT"
 
     apply {
