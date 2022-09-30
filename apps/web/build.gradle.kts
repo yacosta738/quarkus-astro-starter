@@ -31,6 +31,10 @@ dependencies {
     implementation("org.apache.commons:commons-lang3:3.12.0")
 
     annotationProcessor("io.quarkus:quarkus-panache-common")
+
+    implementation(platform("org.testcontainers:testcontainers-bom:1.17.4"))
+    testImplementation("org.testcontainers:postgresql")
+
 }
 allOpen {
     annotation("javax.persistence.Entity")
