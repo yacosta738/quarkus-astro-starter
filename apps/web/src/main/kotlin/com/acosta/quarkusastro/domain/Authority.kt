@@ -1,6 +1,5 @@
 package com.acosta.quarkusastro.domain
 
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase
 import io.quarkus.runtime.annotations.RegisterForReflection
 import java.io.Serializable
 import java.util.*
@@ -13,19 +12,19 @@ import javax.validation.constraints.Size
  * An authority (a security role).
  */
 @Entity
-@Table(name = "authority")
+@Table(name = "authorities")
 @Cacheable
 @RegisterForReflection
-class Authority : PanacheEntityBase, Serializable {
+open class Authority: Serializable {
     @Id
     @Column(length = 50)
-    var name: @NotNull @Size(max = 50) String? = null
+    var name: @NotNull @Size(max = 50) String = ""
 
     constructor() {
         //empty
     }
 
-    constructor(name: String?) {
+    constructor(name: String) {
         //for jsonb
         this.name = name
     }

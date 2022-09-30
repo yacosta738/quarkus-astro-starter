@@ -1,6 +1,8 @@
 package com.acosta.quarkusastro.service
 
 import com.acosta.quarkusastro.domain.User
+import com.acosta.quarkusastro.repository.AuthorityRepository
+import com.acosta.quarkusastro.repository.UserRepository
 import com.acosta.quarkusastro.security.BCryptPasswordHasher
 import com.acosta.quarkusastro.security.UserNotActivatedException
 import com.acosta.quarkusastro.security.UsernameNotFoundException
@@ -17,12 +19,19 @@ import javax.inject.Inject
 @ApplicationScoped
 class AuthenticationService @Inject constructor(private val passwordHasher: BCryptPasswordHasher) {
     private val log = LoggerFactory.getLogger(AuthenticationService::class.java)
+
+    @Inject
+    lateinit var userRepository: UserRepository
+
+    @Inject
+    lateinit var authorityRepository: AuthorityRepository
+
     fun authenticate(login: String, password: String): QuarkusSecurityIdentity {
         val user: User = loadByUsername(login)
         if (!user.activated) {
             throw UserNotActivatedException("User $login was not activated")
         }
-        if (user.password?.let { passwordHasher.checkPassword(password, it) } == true) {
+        if (user.password.let { passwordHasher.checkPassword(password, it) }) {
             return createQuarkusSecurityIdentity(user)
         }
         log.debug("Authentication failed: password does not match stored value")
@@ -32,14 +41,14 @@ class AuthenticationService @Inject constructor(private val passwordHasher: BCry
     private fun loadByUsername(login: String): User {
         log.debug("Authenticating {}", login)
         if (login.matches(Regex(emailValidator))) {
-            return User
+            return userRepository
                 .findOneWithAuthoritiesByEmailIgnoreCase(login)
-                .orElseThrow { UsernameNotFoundException("User with email $login was not found in the database") }
+                ?: throw UsernameNotFoundException("User with email $login was not found in the database")
         }
         val lowercaseLogin = login.lowercase()
-        return User
+        return userRepository
             .findOneWithAuthoritiesByLogin(lowercaseLogin)
-            .orElseThrow { UsernameNotFoundException("User $lowercaseLogin was not found in the database") }
+            ?: throw UsernameNotFoundException("User $lowercaseLogin was not found in the database")
     }
 
     private fun createQuarkusSecurityIdentity(user: User): QuarkusSecurityIdentity {

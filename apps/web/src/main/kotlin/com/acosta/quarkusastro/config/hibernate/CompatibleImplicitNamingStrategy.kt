@@ -5,7 +5,7 @@ import org.hibernate.boot.model.naming.ImplicitJoinTableNameSource
 import org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
 
 
-class CompatibleImplicitNamingStrategy :
+open class CompatibleImplicitNamingStrategy :
     ImplicitNamingStrategyJpaCompliantImpl() {
     override fun determineJoinTableName(source: ImplicitJoinTableNameSource): Identifier {
         val joinedName =
@@ -13,4 +13,3 @@ class CompatibleImplicitNamingStrategy :
         return toIdentifier(joinedName, source.buildingContext)
     }
 }
-

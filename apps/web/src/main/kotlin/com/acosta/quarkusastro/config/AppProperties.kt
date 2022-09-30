@@ -4,30 +4,39 @@ import io.smallrye.config.ConfigMapping
 
 
 @ConfigMapping(prefix = "app")
-class AppProperties {
-    lateinit var security: Security
-    lateinit var mail: Mail
+interface AppProperties {
+    fun info(): Info
 
-    class Security {
-        lateinit var authentication: Authentication
+    interface Info {
+        fun swagger(): Swagger
+        interface Swagger {
+            fun enable(): Boolean
+        }
+    }
 
-        class Authentication {
-            lateinit var jwt: Jwt
+    fun security(): Security
+    fun mail(): Mail
 
-            class Jwt {
-                var issuer: String? = null
-                var tokenValidityInSeconds: Long = 0
-                var tokenValidityInSecondsForRememberMe: Long = 0
-                var privateKey: PrivateKey? = null
+    interface Security {
+        fun authentication(): Authentication
 
-                class PrivateKey {
-                    lateinit var location: String
+        interface Authentication {
+            fun jwt(): Jwt
+
+            interface Jwt {
+                fun issuer(): String
+                fun tokenValidityInSeconds(): Long
+                fun tokenValidityInSecondsForRememberMe(): Long
+                fun privateKey(): PrivateKey
+
+                interface PrivateKey {
+                    fun location(): String
                 }
             }
         }
     }
 
-    class Mail {
-        lateinit var baseUrl: String
+    interface Mail {
+        fun baseUrl(): String
     }
 }

@@ -7,14 +7,14 @@ import io.quarkus.runtime.annotations.RegisterForReflection
  */
 @RegisterForReflection
 class PasswordChangeDTO {
-    var currentPassword: String? = null
-    var newPassword: String? = null
+    lateinit var currentPassword: String
+    lateinit var newPassword: String
 
     constructor() {
         // Empty constructor needed for Jackson.
     }
 
-    constructor(currentPassword: String?, newPassword: String?) {
+    constructor(currentPassword: String, newPassword: String) {
         this.currentPassword = currentPassword
         this.newPassword = newPassword
     }

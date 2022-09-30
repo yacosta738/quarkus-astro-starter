@@ -1,15 +1,11 @@
 package com.acosta.quarkusastro.domain
 
 import com.acosta.quarkusastro.config.Constants
-import io.quarkus.cache.CacheResult;
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase
-import io.quarkus.panache.common.Page
 import org.hibernate.annotations.BatchSize
 import org.hibernate.annotations.Cache
 import org.hibernate.annotations.CacheConcurrencyStrategy
 import java.io.Serializable
 import java.time.Instant
-import java.util.*
 import javax.json.bind.annotation.JsonbTransient
 import javax.persistence.*
 import javax.validation.constraints.Email
@@ -17,65 +13,63 @@ import javax.validation.constraints.NotNull
 import javax.validation.constraints.Pattern
 import javax.validation.constraints.Size
 
-
 /**
  * A user.
  */
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 @Cacheable
-class User : PanacheEntityBase(), Serializable {
+open class User :  Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
+    var id: Long = 0
 
     @Column(length = 50, unique = true, nullable = false)
-    var login: @NotNull @Pattern(regexp = Constants.LOGIN_REGEX) @Size(min = 1, max = 50) String? =
-        null
+    lateinit var login: @NotNull @Pattern(regexp = Constants.LOGIN_REGEX) @Size(min = 1, max = 50) String
 
     @Column(name = "password_hash", length = 60, nullable = false)
     @JsonbTransient
-    var password: @NotNull @Size(min = 60, max = 60) String? = null
+    lateinit var password: @NotNull @Size(min = 60, max = 60) String
 
     @Column(name = "first_name", length = 50)
-    var firstName: @Size(max = 50) String? = null
+    lateinit var firstName: @Size(max = 50) String
 
     @Column(name = "last_name", length = 50)
-    var lastName: @Size(max = 50) String? = null
+    lateinit var lastName: @Size(max = 50) String
 
     @Column(length = 254, unique = true)
-    var email: @Email @Size(min = 5, max = 254) String? = null
+    lateinit var email: @Email @Size(min = 5, max = 254) String
 
     @Column(nullable = false)
     var activated: @NotNull Boolean = false
 
     @Column(name = "lang_key", length = 10)
-    var langKey: @Size(min = 2, max = 10) String? = null
+    lateinit var langKey: @Size(min = 2, max = 10) String
 
     @Column(name = "image_url", length = 256)
-    var imageUrl: @Size(max = 256) String? = null
+    lateinit var imageUrl: @Size(max = 256) String
 
     @Column(name = "activation_key", length = 20)
     @JsonbTransient
-    var activationKey: @Size(max = 20) String? = null
+    lateinit var activationKey: @Size(max = 20) String
 
     @Column(name = "reset_key", length = 20)
     @JsonbTransient
-    var resetKey: @Size(max = 20) String? = null
+    lateinit var resetKey: @Size(max = 20) String
 
     @Column(name = "reset_date")
     var resetDate: Instant? = null
 
     @ManyToMany
     @JoinTable(
-        name = "jhi_user_authority",
+        name = "user_authority",
         joinColumns = [JoinColumn(name = "user_id", referencedColumnName = "id")],
         inverseJoinColumns = [JoinColumn(name = "authority_name", referencedColumnName = "name")]
     )
     @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
     @BatchSize(size = 20)
     @JsonbTransient
-    var authorities: Set<Authority> = HashSet()
+    var authorities: MutableSet<Authority> = HashSet()
 
     //To move to an audit mechanism
     //    @CreatedBy
@@ -140,74 +134,13 @@ class User : PanacheEntityBase(), Serializable {
     }
 
     override fun hashCode(): Int {
-        return id?.hashCode() ?: 0
+        return id.hashCode() + 31
     }
 
-    companion object {
+    companion object{
         private const val serialVersionUID = 1L
         const val USERS_BY_EMAIL_CACHE = "usersByEmail"
         const val USERS_BY_LOGIN_CACHE = "usersByLogin"
-        fun findOneByActivationKey(activationKey: String): Optional<User> {
-            return find<User>(
-                "activationKey",
-                activationKey
-            ).firstResultOptional()
-        }
-
-        fun findAllByActivatedIsFalseAndActivationKeyIsNotNullAndCreatedDateBefore(dateTime: Instant): List<User> {
-            return list(
-                "activated = false and activationKey not null and createdDate <= ?1",
-                dateTime
-            )
-        }
-
-        fun findOneByResetKey(resetKey: String): Optional<User> {
-            return find<User>(
-                "resetKey",
-                resetKey
-            ).firstResultOptional()
-        }
-
-        fun findOneByEmailIgnoreCase(email: String): Optional<User> {
-            return find<User>(
-                "LOWER(email) = LOWER(?1)",
-                email
-            ).firstResultOptional()
-        }
-
-        fun findOneByLogin(login: String): Optional<User> {
-            return find<User>("login", login).firstResultOptional()
-        }
-
-        fun findOneWithAuthoritiesById(id: Long): Optional<User> {
-            return find<User>(
-                "FROM User u LEFT JOIN FETCH u.authorities WHERE u.id = ?1",
-                id
-            ).firstResultOptional()
-        }
-
-        @CacheResult(cacheName = USERS_BY_LOGIN_CACHE)
-        fun findOneWithAuthoritiesByLogin(login: String): Optional<User> {
-            return find<User>(
-                "FROM User u LEFT JOIN FETCH u.authorities WHERE u.login = ?1",
-                login
-            )
-                .firstResultOptional()
-        }
-
-        @CacheResult(cacheName = USERS_BY_EMAIL_CACHE)
-        fun findOneWithAuthoritiesByEmailIgnoreCase(email: String): Optional<User> {
-            return find<User>(
-                "FROM User u LEFT JOIN FETCH u.authorities WHERE LOWER(u.login) = LOWER(?1)",
-                email
-            )
-                .firstResultOptional()
-        }
-
-        fun findAllByLoginNot(page: Page, login: String): List<User> {
-            return find<User>("login != ?1", login).page<User>(page)
-                .list()
-        }
     }
 }
 

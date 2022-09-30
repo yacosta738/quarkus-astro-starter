@@ -15,8 +15,8 @@ import javax.validation.constraints.Size
  * A DTO representing a user, with his authorities.
  */
 @RegisterForReflection
-class UserDTO {
-    var id: Long = 0
+open class UserDTO {
+    var id: Long? = null
     var login: @NotBlank @Pattern(regexp = Constants.LOGIN_REGEX) @Size(min = 1, max = 50) String =
         ""
     var firstName: @Size(max = 50) String = ""
@@ -36,14 +36,14 @@ class UserDTO {
     }
 
     constructor(user: User) {
-        id = user.id ?: 0
-        login = user.login  ?: ""
-        firstName = user.firstName ?: ""
-        lastName = user.lastName ?: ""
-        email = user.email  ?: ""
+        id = user.id
+        login = user.login
+        firstName = user.firstName
+        lastName = user.lastName
+        email = user.email
         activated = user.activated
-        imageUrl = user.imageUrl    ?: ""
-        langKey = user.langKey  ?: "en"
+        imageUrl = user.imageUrl
+        langKey = user.langKey
         createdBy = user.createdBy
         createdDate = user.createdDate
         lastModifiedBy = user.lastModifiedBy
