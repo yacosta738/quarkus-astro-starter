@@ -1,6 +1,7 @@
 pluginManagement {
     val quarkusPluginVersion: String by settings
     val kotlinVersion: String by settings
+    val nodePlugin: String by settings
     repositories {
         mavenLocal()
         mavenCentral()
@@ -10,6 +11,7 @@ pluginManagement {
         id("io.quarkus") version quarkusPluginVersion
         id("org.jetbrains.kotlin.jvm") version kotlinVersion
         id("org.jetbrains.kotlin.plugin.allopen") version kotlinVersion
+        id("com.github.node-gradle.node") version nodePlugin
     }
 }
 rootProject.name="quarkus-astro-starter"

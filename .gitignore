@@ -103,3 +103,4 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+/apps/web/.cache/
