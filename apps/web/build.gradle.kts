@@ -57,7 +57,7 @@ allOpen {
 val buildWeb = tasks.register<com.github.gradle.node.npm.task.NpmTask>("buildNpm") {
     dependsOn("npmInstall")
     npmCommand.set(listOf("run", "build"))
-    args.set(listOf("--", "--prod"))
+//    args.set(listOf("--", "--prod"))
     inputs.dir("${spa}/src")
     inputs.dir(fileTree("${spa}/node_modules").exclude("${spa}/.cache"))
     outputs.dir("${spa}/dist")
