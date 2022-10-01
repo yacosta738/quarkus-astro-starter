@@ -8,7 +8,7 @@ plugins {
 val spa = "${project.projectDir}/src/main/webapp"
 println("frontend: $spa")
 node {
-    version.set("16.14.0")
+    version.set("16.17.1")
     npmInstallCommand.set("install")
     download.set(true)
     workDir.set(file("${project.projectDir}/.cache/node"))

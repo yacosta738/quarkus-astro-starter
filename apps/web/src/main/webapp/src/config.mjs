@@ -1,7 +1,7 @@
 export const SITE = {
 	name: 'AstroWind',
 
-	origin: 'http://localhost:8080',
+	origin: 'https://astrowind.vercel.app',
 	basePathname: '/',
 
 	title: 'AstroWind — Your website with Astro + Tailwind CSS',
