@@ -3,6 +3,7 @@ import { Icon } from 'astro-icon';
 import Logo from '~/components/atoms/Logo.astro';
 import ToggleTheme from '~/components/core/ToggleTheme.astro';
 import ToggleMenu from '~/components/core/ToggleMenu.astro';
+import LoginButton from '~/components/atoms/LoginButton.astro';
 
 import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permalinks';
 ---
@@ -48,11 +49,7 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 					>
 				</li>
 				<li class="md:hidden">
-					<a
-						class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-						href="https://github.com/yacosta738/quarkus-astro-starter"
-						>Github
-					</a>
+					<LoginButton />
 				</li>
 			</ul>
 			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
@@ -74,6 +71,7 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 					>
 						<Icon name="tabler:brand-github" class="w-5 h-5" />
 					</a>
+					<LoginButton />
 				</div>
 			</div>
 		</nav>
