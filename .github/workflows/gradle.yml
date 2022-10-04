@@ -45,7 +45,7 @@ jobs:
     - name: Dockerized App
       uses: docker/build-push-action@v2
       with:
-          context: apps/web/src/main/docker
-          file: ./Dockerfile.native
+          context: apps/web
+          file: apps/web/src/main/docker/Dockerfile.native
           push: true
           tags: ${{ github.repository }}:${{ github.sha }}
