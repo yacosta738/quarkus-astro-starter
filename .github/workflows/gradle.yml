@@ -31,4 +31,9 @@ jobs:
     - name: Build with Gradle
       uses: gradle/gradle-build-action@c295a4096e1d2c453eaf1f65c6f96686e26bd8be
       with:
-        arguments: build
+        arguments:  build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
+    - name: Dockerize
+      uses: maxday/quarkus-dockerize-action@master
+      with:
+        tag: n4t5u/quarkus-astro-starter:latest
+        executablePath: apps/web/build/quarkus-app/quarkus-run
