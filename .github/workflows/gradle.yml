@@ -32,3 +32,8 @@ jobs:
       uses: gradle/gradle-build-action@c295a4096e1d2c453eaf1f65c6f96686e26bd8be
       with:
         arguments:  build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
+    - name: Upload native executable
+      uses: actions/upload-artifact@v2
+      with:
+        name: native-executable
+        path: build/*-runner
