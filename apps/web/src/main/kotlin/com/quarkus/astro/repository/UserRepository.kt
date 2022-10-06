@@ -1,6 +1,6 @@
 package com.quarkus.astro.repository
 
-import com.acosta.quarkusastro.domain.User
+import com.quarkus.astro.domain.User
 import io.quarkus.cache.CacheResult
 import io.quarkus.hibernate.orm.panache.kotlin.PanacheRepository
 import io.quarkus.panache.common.Page

@@ -1,13 +1,13 @@
 package com.quarkus.astro.web.rest
 
-import com.acosta.quarkusastro.service.*
-import com.acosta.quarkusastro.service.dto.PasswordChangeDTO
-import com.acosta.quarkusastro.service.dto.UserDTO
-import com.acosta.quarkusastro.web.rest.errors.AccountResourceException
-import com.acosta.quarkusastro.web.rest.errors.EmailNotFoundException
-import com.acosta.quarkusastro.web.rest.errors.InvalidPasswordWebException
-import com.acosta.quarkusastro.web.rest.vm.KeyAndPasswordVM
-import com.acosta.quarkusastro.web.rest.vm.ManagedUserVM
+import com.quarkus.astro.service.*
+import com.quarkus.astro.service.dto.PasswordChangeDTO
+import com.quarkus.astro.service.dto.UserDTO
+import com.quarkus.astro.web.rest.errors.AccountResourceException
+import com.quarkus.astro.web.rest.errors.EmailNotFoundException
+import com.quarkus.astro.web.rest.errors.InvalidPasswordWebException
+import com.quarkus.astro.web.rest.vm.KeyAndPasswordVM
+import com.quarkus.astro.web.rest.vm.ManagedUserVM
 import io.quarkus.security.Authenticated
 import org.slf4j.LoggerFactory
 import java.security.Principal

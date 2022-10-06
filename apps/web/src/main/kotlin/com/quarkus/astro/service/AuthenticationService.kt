@@ -1,11 +1,11 @@
 package com.quarkus.astro.service
 
-import com.acosta.quarkusastro.domain.User
-import com.acosta.quarkusastro.repository.AuthorityRepository
-import com.acosta.quarkusastro.repository.UserRepository
-import com.acosta.quarkusastro.security.BCryptPasswordHasher
-import com.acosta.quarkusastro.security.UserNotActivatedException
-import com.acosta.quarkusastro.security.UsernameNotFoundException
+import com.quarkus.astro.domain.User
+import com.quarkus.astro.repository.AuthorityRepository
+import com.quarkus.astro.repository.UserRepository
+import com.quarkus.astro.security.BCryptPasswordHasher
+import com.quarkus.astro.security.UserNotActivatedException
+import com.quarkus.astro.security.UsernameNotFoundException
 import io.quarkus.security.AuthenticationFailedException
 import io.quarkus.security.credential.PasswordCredential
 import io.quarkus.security.runtime.QuarkusPrincipal

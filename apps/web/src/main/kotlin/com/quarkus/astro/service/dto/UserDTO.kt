@@ -1,7 +1,7 @@
 package com.quarkus.astro.service.dto
 
 import com.quarkus.astro.config.Constants
-import com.acosta.quarkusastro.domain.User
+import com.quarkus.astro.domain.User
 import io.quarkus.runtime.annotations.RegisterForReflection
 import java.time.Instant
 import java.util.stream.Collectors

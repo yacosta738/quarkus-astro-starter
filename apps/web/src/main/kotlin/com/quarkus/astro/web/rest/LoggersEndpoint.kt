@@ -1,7 +1,7 @@
 package com.quarkus.astro.web.rest
 
-import com.acosta.quarkusastro.security.AuthoritiesConstants
-import com.acosta.quarkusastro.web.rest.vm.LoggerVM
+import com.quarkus.astro.security.AuthoritiesConstants
+import com.quarkus.astro.web.rest.vm.LoggerVM
 import io.quarkus.runtime.annotations.RegisterForReflection
 import java.util.*
 import java.util.function.Function

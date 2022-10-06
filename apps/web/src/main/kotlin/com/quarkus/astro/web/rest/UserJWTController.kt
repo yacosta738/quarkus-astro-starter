@@ -1,8 +1,8 @@
 package com.quarkus.astro.web.rest
 
-import com.acosta.quarkusastro.security.jwt.TokenProvider
-import com.acosta.quarkusastro.service.AuthenticationService
-import com.acosta.quarkusastro.web.rest.vm.LoginVM
+import com.quarkus.astro.security.jwt.TokenProvider
+import com.quarkus.astro.service.AuthenticationService
+import com.quarkus.astro.web.rest.vm.LoginVM
 import io.quarkus.runtime.annotations.RegisterForReflection
 import io.quarkus.security.UnauthorizedException
 import org.slf4j.LoggerFactory

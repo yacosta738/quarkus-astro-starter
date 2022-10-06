@@ -1,6 +1,6 @@
 package com.quarkus.astro.web.rest
 
-import com.acosta.quarkusastro.service.ManagementInfoService
+import com.quarkus.astro.service.ManagementInfoService
 import javax.enterprise.context.RequestScoped
 import javax.inject.Inject
 import javax.ws.rs.Consumes

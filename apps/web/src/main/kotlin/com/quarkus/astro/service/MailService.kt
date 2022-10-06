@@ -1,7 +1,6 @@
 package com.quarkus.astro.service
 
-import com.quarkus.astro.config.AppProperties
-import com.acosta.quarkusastro.domain.User
+import com.quarkus.astro.domain.User
 import io.quarkus.mailer.MailTemplate
 import io.quarkus.qute.Location
 import org.slf4j.LoggerFactory

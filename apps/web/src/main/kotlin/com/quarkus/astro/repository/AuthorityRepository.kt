@@ -1,6 +1,6 @@
 package com.quarkus.astro.repository
 
-import com.acosta.quarkusastro.domain.Authority
+import com.quarkus.astro.domain.Authority
 import io.quarkus.hibernate.orm.panache.kotlin.PanacheRepository
 import javax.enterprise.context.ApplicationScoped
 

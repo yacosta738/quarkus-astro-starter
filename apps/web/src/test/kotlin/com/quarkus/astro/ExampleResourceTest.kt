@@ -1,6 +1,6 @@
 package com.quarkus.astro
 
-import com.acosta.quarkusastro.containers.PostgresResource
+import com.quarkus.astro.containers.PostgresResource
 import io.quarkus.test.common.QuarkusTestResource
 import io.quarkus.test.junit.QuarkusTest
 import io.restassured.RestAssured.given

@@ -1,6 +1,6 @@
 package com.quarkus.astro.domain
 
-import com.acosta.quarkusastro.port.CustomerService
+import com.quarkus.astro.port.CustomerService
 import javax.enterprise.context.ApplicationScoped
 
 @ApplicationScoped

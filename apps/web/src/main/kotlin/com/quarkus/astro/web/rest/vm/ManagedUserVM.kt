@@ -1,6 +1,6 @@
 package com.quarkus.astro.web.rest.vm
 
-import com.acosta.quarkusastro.service.dto.UserDTO
+import com.quarkus.astro.service.dto.UserDTO
 import io.quarkus.runtime.annotations.RegisterForReflection
 import javax.validation.constraints.Size
 

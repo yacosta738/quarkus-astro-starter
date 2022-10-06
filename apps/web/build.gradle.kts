@@ -14,19 +14,18 @@ plugins {
 val spa = "${project.projectDir}/src/main/webapp"
 println("frontend: $spa")
 
-if (project.hasProperty("nodeInstall")) {
-    node {
-        version.set(nodeVersion)
-        npmVersion.set(npmVersion)
-        npmInstallCommand.set("install")
-        download.set(true)
-        workDir.set(file("${project.projectDir}/.cache/node"))
-        npmWorkDir.set(file("${project.projectDir}/.cache/npm"))
-        yarnWorkDir.set(file("${project.projectDir}/.cache/yarn"))
-        nodeProjectDir.set(file(spa))
-        nodeProxySettings.set(com.github.gradle.node.npm.proxy.ProxySettings.SMART)
-    }
+node {
+    version.set(nodeVersion)
+    npmVersion.set(npmVersion)
+    npmInstallCommand.set("install")
+    download.set(true)
+    workDir.set(file("${project.projectDir}/.cache/node"))
+    npmWorkDir.set(file("${project.projectDir}/.cache/npm"))
+    yarnWorkDir.set(file("${project.projectDir}/.cache/yarn"))
+    nodeProjectDir.set(file(spa))
+    nodeProxySettings.set(com.github.gradle.node.npm.proxy.ProxySettings.SMART)
 }
+
 dependencies {
     implementation(project(":port"))
     implementation(project(":domain"))

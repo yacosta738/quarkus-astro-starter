@@ -1,14 +1,14 @@
 package com.quarkus.astro.web.rest
 
-import com.acosta.quarkusastro.domain.User
-import com.acosta.quarkusastro.security.AuthoritiesConstants
-import com.acosta.quarkusastro.service.EmailAlreadyUsedException
-import com.acosta.quarkusastro.service.LoginAlreadyUsedException
-import com.acosta.quarkusastro.service.MailService
-import com.acosta.quarkusastro.service.UserService
-import com.acosta.quarkusastro.service.dto.UserDTO
-import com.acosta.quarkusastro.web.rest.errors.BadRequestAlertException
-import com.acosta.quarkusastro.web.util.HeaderUtil
+import com.quarkus.astro.domain.User
+import com.quarkus.astro.security.AuthoritiesConstants
+import com.quarkus.astro.service.EmailAlreadyUsedException
+import com.quarkus.astro.service.LoginAlreadyUsedException
+import com.quarkus.astro.service.MailService
+import com.quarkus.astro.service.UserService
+import com.quarkus.astro.service.dto.UserDTO
+import com.quarkus.astro.web.rest.errors.BadRequestAlertException
+import com.quarkus.astro.web.util.HeaderUtil
 import org.eclipse.microprofile.config.inject.ConfigProperty
 import org.slf4j.LoggerFactory
 import java.util.*

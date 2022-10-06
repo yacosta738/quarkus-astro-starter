@@ -1,6 +1,6 @@
 package com.quarkus.astro
 
-import com.acosta.quarkusastro.port.CustomerService
+import com.quarkus.astro.port.CustomerService
 import javax.inject.Inject
 import javax.ws.rs.GET
 import javax.ws.rs.Path

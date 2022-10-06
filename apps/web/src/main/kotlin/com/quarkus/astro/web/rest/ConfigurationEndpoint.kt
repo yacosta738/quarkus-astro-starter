@@ -1,8 +1,8 @@
 package com.quarkus.astro.web.rest
 
-import com.acosta.quarkusastro.security.AuthoritiesConstants
-import com.acosta.quarkusastro.web.rest.vm.ConfigPropsVM
-import com.acosta.quarkusastro.web.rest.vm.EnvVM
+import com.quarkus.astro.security.AuthoritiesConstants
+import com.quarkus.astro.web.rest.vm.ConfigPropsVM
+import com.quarkus.astro.web.rest.vm.EnvVM
 import io.quarkus.runtime.configuration.ProfileManager
 import org.eclipse.microprofile.config.ConfigProvider
 import org.eclipse.microprofile.config.spi.ConfigSource

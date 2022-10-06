@@ -1,7 +1,7 @@
 package com.quarkus.astro.service
 
 import com.quarkus.astro.config.AppProperties
-import com.acosta.quarkusastro.service.dto.ManagementInfoDTO
+import com.quarkus.astro.service.dto.ManagementInfoDTO
 import io.quarkus.runtime.configuration.ProfileManager
 import javax.enterprise.context.ApplicationScoped
 import javax.inject.Inject
