@@ -4,9 +4,10 @@ services:
     image: n4t5u/quarkus-astro-starter:main
     container_name: quarkus-astro-starter
     environment:
-        - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql-database-service:5432/astro
-        - SPRING_DATASOURCE_USERNAME=astro
-        - SPRING_DATASOURCE_PASSWORD=astro
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql-database-service:5432/astro
+      - SPRING_DATASOURCE_USERNAME=astro
+      - SPRING_DATASOURCE_PASSWORD=astro
     ports:
       - "8080:8080"
 
