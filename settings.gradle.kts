@@ -3,7 +3,6 @@ pluginManagement {
     val kotlinVersion: String by settings
     val liquibasePluginVersion: String by settings
     val sonarqubePluginVersion: String by settings
-    val gitPropertiesPluginVersion: String by settings
     val gradleNodePluginVersion: String by settings
     val aptPluginVersion: String by settings
 
@@ -19,7 +18,6 @@ pluginManagement {
         id("com.github.node-gradle.node") version gradleNodePluginVersion
         id("org.liquibase.gradle") version liquibasePluginVersion
         id("org.sonarqube") version sonarqubePluginVersion
-        id("com.gorylenko.gradle-git-properties") version gitPropertiesPluginVersion
         id("net.ltgt.apt-eclipse") version aptPluginVersion
         id("net.ltgt.apt-idea") version aptPluginVersion
         id("net.ltgt.apt") version aptPluginVersion
