@@ -34,7 +34,7 @@ jobs:
         with:
           arguments: build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
       - name: Upload native executable
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: native-executable
           path: build/*-runner
