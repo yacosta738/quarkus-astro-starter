@@ -54,7 +54,7 @@ jobs:
             n4t5u/quarkus-astro-starter
 
       - name: Dockerized App
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           context: apps/web
           file: apps/web/src/main/docker/Dockerfile.native
