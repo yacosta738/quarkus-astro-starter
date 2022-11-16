@@ -54,7 +54,7 @@ dependencies {
 
     annotationProcessor("io.quarkus:quarkus-panache-common")
 
-    implementation(platform("org.testcontainers:testcontainers-bom:1.17.4"))
+    implementation(platform("org.testcontainers:testcontainers-bom:1.17.6"))
     testImplementation("org.testcontainers:postgresql")
 
 }
