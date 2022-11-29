@@ -48,7 +48,7 @@ jobs:
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        uses: docker/metadata-action@314ddf6d4a82333bf1bc7630399df41bf68eba09
         with:
           images: |
             n4t5u/quarkus-astro-starter
