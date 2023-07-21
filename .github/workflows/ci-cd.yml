@@ -30,7 +30,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@c295a4096e1d2c453eaf1f65c6f96686e26bd8be
+        uses: gradle/gradle-build-action@1b94073332d9e2719d696b8605c4c018939f310b
         with:
           arguments: build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
       - name: Upload native executable
