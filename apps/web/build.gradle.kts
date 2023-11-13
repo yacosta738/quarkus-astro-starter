@@ -43,7 +43,7 @@ dependencies {
     implementation("io.quarkus:quarkus-liquibase")
     implementation("io.quarkus:quarkus-smallrye-health")
     implementation("io.quarkus:quarkus-smallrye-openapi")
-    implementation("org.mapstruct:mapstruct-processor:1.5.2.Final")
+    implementation("org.mapstruct:mapstruct-processor:1.5.5.Final")
     implementation("com.tietoevry.quarkus:quarkus-resteasy-problem:2.0.1")
 
 
