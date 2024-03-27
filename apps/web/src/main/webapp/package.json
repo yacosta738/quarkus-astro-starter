@@ -22,7 +22,7 @@
     "@astrolib/analytics": "0.2.4",
     "@astrolib/seo": "0.2.1",
     "@fontsource/inter": "4.5.13",
-    "@tailwindcss/typography": "0.5.7",
+    "@tailwindcss/typography": "0.5.12",
     "@typescript-eslint/eslint-plugin": "5.39.0",
     "@typescript-eslint/parser": "5.39.0",
     "astro": "1.4.4",
