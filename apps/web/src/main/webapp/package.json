@@ -14,11 +14,11 @@
     "subfont": "subfont -ir --no-fallbacks --silent --root dist"
   },
   "devDependencies": {
-    "@astrojs/image": "0.9.1",
-    "@astrojs/partytown": "1.0.0",
+    "@astrojs/image": "0.18.0",
+    "@astrojs/partytown": "1.2.3",
     "@astrojs/rss": "1.0.2",
-    "@astrojs/sitemap": "1.0.0",
-    "@astrojs/tailwind": "2.0.2",
+    "@astrojs/sitemap": "1.4.0",
+    "@astrojs/tailwind": "2.1.3",
     "@astrolib/analytics": "0.2.4",
     "@astrolib/seo": "0.2.1",
     "@fontsource/inter": "4.5.13",
